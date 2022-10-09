@@ -10,6 +10,7 @@ pyTelegramBotAPI = "^4.7.0"
 Flask = "^2.2.2"
 imagekitio = "^2.2.8"
 replit = "^3.2.4"
+validators = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 
