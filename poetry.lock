@@ -90,6 +90,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "decorator"
+version = "5.1.1"
+description = "Decorators for Humans"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
 name = "flask"
 version = "2.2.2"
 description = "A simple framework for building complex web applications."
@@ -264,6 +272,20 @@ secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "cer
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
+name = "validators"
+version = "0.20.0"
+description = "Python Data Validation for Humans™."
+category = "main"
+optional = false
+python-versions = ">=3.4"
+
+[package.dependencies]
+decorator = ">=3.4.0"
+
+[package.extras]
+test = ["pytest (>=2.2.3)", "flake8 (>=2.4.0)", "isort (>=4.2.2)"]
+
+[[package]]
 name = "werkzeug"
 version = "2.2.2"
 description = "The comprehensive WSGI web application library."
@@ -304,7 +326,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "de25e4d6604e952bb81e4174271f43a9f989462b7be60a57779769f45173b19c"
+content-hash = "ca4a57914f0eaa42edbd12f1a37a3092035a0b6eac53c1e484ea1b2d883f3688"
 
 [metadata.files]
 aiohttp = []
@@ -315,6 +337,7 @@ certifi = []
 charset-normalizer = []
 click = []
 colorama = []
+decorator = []
 flask = []
 frozenlist = []
 idna = []
@@ -329,6 +352,7 @@ replit = []
 requests = []
 typing-extensions = []
 urllib3 = []
+validators = []
 werkzeug = []
 yarl = []
 zipp = []

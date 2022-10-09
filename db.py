@@ -4,7 +4,7 @@ def writeToDB(key,image_link,file_size,file_id):
     if key in db.keys():
         db[key]["images"].append(image_link)
         db[key]["file_id"].append(file_id)
-        db[key]["storageUsed"] = file_size
+        db[key]["storageUsed"] += file_size
     else:
         db[key] = {"storageUsed": file_size, "images":[image_link], "file_id":[file_id], "paid":False}
 
@@ -19,8 +19,8 @@ def getUserData(key):
         images = db[key].get("images", None)
         allImages = ''
         if images:
-            for image in images:
-                allImages += f'{image}\n\n'
+            for index, image in enumerate(images):
+                allImages += f'{index+1}) {image}\n\n'
             return f'{storageTemplate}{storageUsed}MB\n\n{imagesTemplate}{allImages}'
         else:
             allImages = 'None'
